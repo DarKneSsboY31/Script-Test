@@ -7,8 +7,7 @@ public class Boss
 {
     private int mp = 53;     //魔力
 
-    public void Magic() {
-        for(int i = mp;i > 0; i-= 5) { 
+    public void Magic() { 
         if(mp > 5) { 
         //魔法攻撃の関数の作成、魔法が津会える状態（MP 5以上）なら、魔法使用の表示+MP　5消費
         this.mp -= 5;
@@ -21,7 +20,6 @@ public class Boss
         }
     }
 }
-}
 
 public class Test2 : MonoBehaviour {
 
@@ -31,8 +29,11 @@ public class Test2 : MonoBehaviour {
         Boss bigmagic = new Boss();
 
         //魔法の関数を呼び出す。
-        bigmagic.Magic();
-	}
+        for (int i = 0; i < 11; i++)
+        {
+            bigmagic.Magic();
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
